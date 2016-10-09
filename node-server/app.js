@@ -1,3 +1,5 @@
+// retrieves Project Tango's measurement and sends over to IoT. 
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -45,7 +47,7 @@ if (app.get('env') === 'development') {
   });
 }
 
-// production error handler
+// production error handler 
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
